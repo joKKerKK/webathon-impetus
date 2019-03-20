@@ -17,7 +17,7 @@
 <script type="text/javascript">
   /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
   (function(d, m){
-    var kommunicateSettings = {"appId":"1917769b0dc58b922e293a55f43a8592a","conversationTitle":"Kiran Kumar R"};
+    var kommunicateSettings = {"appId":"1917769b0dc58b922e293a55f43a8592a","conversationTitle":"Yuvi"};
     var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
     s.src = "https://api.kommunicate.io/v2/kommunicate.app";
     var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
@@ -41,6 +41,19 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script>
+  document.getElementById('searchform').onsubmit = function() {
+    window.location = 'file:///C:/Users/MANOHAR/Desktop/base/IEEE/impetus%2019/webathon/webathon-impetus/home.htm?search=bu#myPage ' + document.getElementById('submitSearch').value;
+    return false;
+}
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+  </script>
       
 <style>
    .nav-tabs li a {
@@ -139,7 +152,7 @@ form.example::after {
   display: table;
 }
 #search{
-  width:50%;
+  width:35%;
   float: left;
   margin-top: 4%
 }
@@ -283,16 +296,25 @@ form.example button {
         <li><a href="#">Placements</a></li>        
         <li><a href="#">Forums </a></li>
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fests
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Extra-Curricular
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Impetus</a></li>
-                <li><a href="#">Inspiron</a></li>
-                <li><a href="#">Milagro</a></li>
-                <li><a href="#">Fiesta</a></li>
-                <li><a href="#">Kagada</a></li>
+                <li><a href="http://www.visionuvce.in/" target="_blank">Vision Uvce</a></li>
+                <li><a href="http://ieeeuvce.in/" target="_blank">IEEE UVCE</a></li>
+                <li><a >Adhamya</a></li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Fests</a></li>
+                    <!-- <ul class="dropdown-menu">
+                        <li><a href="#">Impetus</a></li>
+                        <li><a href="#">Inspiron</a></li>
+                        <li><a href="#">Milagro</a></li>
+                        <li><a href="#">Fiesta</a></li>
+                        <li><a href="#">Kagada</a></li>
+                    </ul> -->
+                  </li>   
             </ul>
-          </li>   
+          </li> 
+        
       </ul>
       <ul class="nav navbar-nav navbar-right">
           <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -344,8 +366,8 @@ form.example button {
                   <div class="search-container">
                       <!-- The form -->
                       <form class="example" >
-                          <input type="text" placeholder="Search.." name="search">
-                          <button type="submit"><i class="fa fa-search"></i></button>
+                          <input type="text" placeholder="Search.." name="search" id="searchItem">
+                          <button id="searchform" type="submit"><i class="fa fa-search"></i></button>
                         </form>
               </div>
           </div>
@@ -504,7 +526,7 @@ form.example button {
               <li><i class="fas fa-tags"></i> <a href="#">Tag 1</a>, <a href="#">Tag 2</a></li>
             </ul> -->
             <p>write something about the fest </p>
-            <footer><a class="btn" href="#" >Read More</a></footer>
+            <footer><a class="btn" href="http://impetus19.com/" >Read More</a></footer>
           </div>
         </article>
       </li>
