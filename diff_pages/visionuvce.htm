@@ -1,0 +1,52 @@
+
+<style>
+    
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
+  }
+  body.dark-mode a {
+    color: #111;
+  }
+  body.dark-mode button {
+    background-color: #eee;
+    color: #111;
+  }
+  body.light-mode {
+    background-color: #eee;
+    color: #111;
+  }
+  body.light-mode a {
+    color: #111;
+  }
+  body.light-mode button {
+    background-color: #111;
+    color: #eee;
+  }
+    
+</style>
+
+<script type="text/javascript">
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+    (function(d, m){
+      var kommunicateSettings = {"appId":"1917769b0dc58b922e293a55f43a8592a","conversationTitle":"Yuvi"};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://api.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+    })(document, window.kommunicate || {});
+
+    function toggleDarkLight() {
+        var body = document.getElementById("body");
+        var currentClass = body.className;
+        body.className = currentClass == "dark-mode" ? "light-mode" : "dark-mode";
+      }
+  </script>
+  
+
+   <body   id="body" class="dark-mode">
+
+        <button style="margin-left:1220px; position:fixed"  type="button" name="dark_light" onclick="toggleDarkLight()" title="Toggle dark/light mode">🌛 Night Mode</button>
+
+       <iframe src="http://www.visionuvce.in/" style="height:97%; width:100%">  </iframe>
+  </body>
